@@ -1,0 +1,13 @@
+language: python
+python:
+  - "3.9"
+
+before_install:
+  - pip install pycodestyle
+
+install:
+  - pip install pipenv
+  - pipenv install --dev
+
+script:
+  - pycodestyle src/ --ignore=E722,E581,E482
